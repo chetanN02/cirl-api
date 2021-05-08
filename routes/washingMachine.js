@@ -17,7 +17,7 @@ router.get("/:barcodeId", async (req, res) => {
 //post
 router.post("/", (req, res) => {
     const washingmachine = new WashingMachine(req.body)
-    washingmachine.save().then(washingmachine=>{
+    washingmachine.save().then(washingmachine => {
         res.send(washingmachine)
     }).catch(err => {
         res.status(500).send(err)
