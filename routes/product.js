@@ -8,16 +8,16 @@ router.get("/",(req,res) => {
 
 // get
 router.get("/:barcodeId", async (req, res) => {
-    const product = await products.findOne({
+    const p = await products.findOne({
         barcodeId: req.params.barcodeId,
     })
-    res.json(product)
+    res.json(p)
 })
 
 //post
 router.post("/", (req, res) => {
-    const product = new products(req.body)
-    products.save().then(product => {
+    const p = new products(req.body)
+    p.save().then(product => {
         res.send(product)
     }).catch(err => {
         res.status(500).send(err)

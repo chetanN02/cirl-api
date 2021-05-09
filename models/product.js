@@ -37,4 +37,4 @@ var productSchema = new mongoose.Schema({
 })
 
 //Compile into model
-module.exports = mongoose.model("Product", productSchema)
+module.exports = mongoose.model("product", productSchema)
