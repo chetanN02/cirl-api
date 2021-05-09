@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router();
-const WashingMachine = require("../models/washingMachine")
+const products = require("../models/product")
 
 router.get("/",(req,res) => {
     res.send("Hey")
@@ -8,17 +8,17 @@ router.get("/",(req,res) => {
 
 // get
 router.get("/:barcodeId", async (req, res) => {
-    const washingmachine = await WashingMachine.findOne({
+    const product = await products.findOne({
         barcodeId: req.params.barcodeId,
     })
-    res.json(washingmachine)
+    res.json(product)
 })
 
 //post
 router.post("/", (req, res) => {
-    const washingmachine = new WashingMachine(req.body)
-    washingmachine.save().then(washingmachine => {
-        res.send(washingmachine)
+    const product = new products(req.body)
+    products.save().then(product => {
+        res.send(product)
     }).catch(err => {
         res.status(500).send(err)
     })
