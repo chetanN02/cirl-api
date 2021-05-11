@@ -9,10 +9,10 @@ router.get("/",(req,res) => {
 
 //get washingmachine
 
-router.get("/:product", async (req, res) => {
-    if(req.params.product=="washingmachine"){
+router.get("/prod/:prodName", async (req, res) => {
+    if(req.params.prodName=="washingmachine"){
         const washingmachine = await products.find({
-            productGroup: req.params.product,
+            productGroup: req.params.prodName,
         })
     }
     
