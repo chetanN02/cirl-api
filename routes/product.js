@@ -22,9 +22,6 @@ router.get("/prod/:prodName", async(req, res) => {
         })
         res.send(washingmachine)
     }
-    
-    
-    // res.send(typeof(req.params.prodName))
 })
 
 // get
