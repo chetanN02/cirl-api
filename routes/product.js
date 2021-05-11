@@ -7,9 +7,9 @@ router.get("/",(req,res) => {
 })
 
 
-router.get("/prod",(req,res) => {
-    res.send("Hey")
-})
+// router.get("/prod",(req,res) => {
+//     res.send("Hey")
+// })
 
 //get washingmachine
 
