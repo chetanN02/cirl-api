@@ -23,7 +23,7 @@ router.get("/prod/:prodName", (req, res) => {
     // }
     
     // res.json(washingmachine)
-    res.render(req.params)
+    res.send(req.params)
 })
 
 // get
