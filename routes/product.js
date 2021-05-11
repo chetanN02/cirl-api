@@ -7,7 +7,13 @@ router.get("/",(req,res) => {
 })
 
 
+router.get("/prod",(req,res) => {
+    res.send("Hey")
+})
+
 //get washingmachine
+
+
 
 router.get("/prod/:prodName", async (req, res) => {
     // if(String(req.params.prodName)=="washingmachine"){
