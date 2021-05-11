@@ -20,7 +20,7 @@ router.get("/prod/:prodName", (req, res) => {
         const washingmachine = await products.find({
             productGroup: req.params.prodName,
         })
-        res.json(washingmachine)
+        res.send(washingmachine)
     }
     
     
