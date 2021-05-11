@@ -9,6 +9,7 @@ var productSchema = new mongoose.Schema({
     productGroup: String,
     modelIdentifier: String,
     manufacturerName: String,
+    brand:String,
     overall_rating: {
         type: Number,
         min:0,
