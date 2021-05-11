@@ -6,6 +6,19 @@ router.get("/",(req,res) => {
     res.send("Hey")
 })
 
+
+//get washingmachine
+
+router.get("/:product", async (req, res) => {
+    if(req.params.product=="washingmachine"){
+        const washingmachine = await products.find({
+            productGroup: req.params.product,
+        })
+    }
+    
+    res.json(washingmachine)
+})
+
 // get
 router.get("/:barcodeId", async (req, res) => {
     const p = await products.findOne({
