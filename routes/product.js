@@ -10,13 +10,14 @@ router.get("/",(req,res) => {
 //get washingmachine
 
 router.get("/prod/:prodName", async (req, res) => {
-    if(String(req.params.prodName)=="washingmachine"){
-        const washingmachine = await products.find({
-            productGroup: req.params.prodName,
-        })
-    }
+    // if(String(req.params.prodName)=="washingmachine"){
+    //     const washingmachine = await products.find({
+    //         productGroup: req.params.prodName,
+    //     })
+    // }
     
-    res.json(washingmachine)
+    // res.json(washingmachine)
+    res.render(req.params)
 })
 
 // get
