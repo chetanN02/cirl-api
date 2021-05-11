@@ -7,15 +7,15 @@ router.get("/",(req,res) => {
 })
 
 
-// router.get("/prod",(req,res) => {
-//     res.send("Hey")
-// })
 
-//get washingmachine
-
+router.get("/prod",(req,res) => {
+    res.send("Hey")
+})
 
 
-router.get("/prod/:prodName", async (req, res) => {
+
+//get product list
+router.get("/prod/:prodName", async(req, res) => {
     if(req.params.prodName=="washingmachine"){
         const washingmachine = await products.find({
             productGroup: req.params.prodName,
